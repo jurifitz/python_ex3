@@ -1,12 +1,8 @@
-##"C:/Users/jfafi/PycharmProjects/python_ex3/precip_data.txt"
-
 import numpy
+import filereader
 
-def filereader(path):
-    precip = []
-    f = open(path, "r")
-    for line in f:
-        precip.append(line[26:30])
-    return precip
-
-my = numpy.array(xi[1:]).astype(numpy.float)
+precipi = filereader.file() ##insert file path
+mydata = numpy.array(precipi[1:]).astype(numpy.float)
+print(f"Minimal precipitation: {mydata.min()}")
+print(f"Maximal precipitation: {mydata.max()}")
+print(f"Mean precipitation: {mydata.mean()}")
